@@ -57,8 +57,8 @@ svg.append("g")
 svg.append("g")
 	.attr("class", "lines");
 
-var width = 960,
-    height = 450,
+var width = 900,
+    height = 400,
 	radius = Math.min(width, height) / 2;
 
 var pie = d3.layout.pie()
