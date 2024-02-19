@@ -2,9 +2,11 @@ import React from 'react';
 import './App.css';
 
 import {
+  createBrowserRouter,
   BrowserRouter as Router,
   Routes,
   Route,
+  BrowserRouter as router,
 } from "react-router-dom";
 
 import Menu from './Menu/Menu';
@@ -15,8 +17,23 @@ import AboutPage from './AboutPage/AboutPage';
 import LoginPage from './LoginPage/LoginPage';
 
 
-
 export default function App() {
+  const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <HomePage/>
+    },
+    {
+        path: '/about',
+        element: <AboutPage/>
+    },
+    {
+        path: '/login',
+        element: <LoginPage/>
+    }
+]);
+
+
   return (
     <div>
     <Router>
